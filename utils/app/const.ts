@@ -1,9 +1,9 @@
 export const DEFAULT_SYSTEM_PROMPT =
   process.env.NEXT_PUBLIC_DEFAULT_SYSTEM_PROMPT ||
-  "You are ChatGPT, a large language model trained by OpenAI. Follow the user's instructions carefully. Respond using markdown.";
+  "You are a friendly chatbot. Follow the user's instructions carefully. Respond using markdown.";
 
 export const OPENAI_API_HOST =
-  process.env.OPENAI_API_HOST || 'https://api.openai.com';
+  process.env.OPENAI_API_HOST || 'http://localhost:8000';
 
 export const DEFAULT_TEMPERATURE = 
   parseFloat(process.env.NEXT_PUBLIC_DEFAULT_TEMPERATURE || "1");
@@ -19,3 +19,6 @@ export const OPENAI_ORGANIZATION =
 
 export const AZURE_DEPLOYMENT_ID =
   process.env.AZURE_DEPLOYMENT_ID || '';
+
+export const MODEL_PATH = process.env.MODEL_PATH || './models/ggml-vic7b-q4_0.bin';
+export const MODEL_NAME = process.env.MODEL_NAME || 'Vicuna';
